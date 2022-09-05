@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+
+<head>
+    <title>Test WSp2p</title>
+</head>
+
+<body>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+
+    <style>
+        select {
+            width: 300px;
+        }
+    </style>
+
+    <div class="container">
+        <div class="col">
+
+            <div class="row">
+                <div class="col">
+                    WS URL:
+                    <input type="text" value="ws://localhost:18888" id="text_ws_url" maxlength="70" />
+                    <button type="button" class="btn btn-dark" id="button_ws_url" width="300px">
+                        Connect
+                    </button>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col">
+                    Join Session
+                    <select class="form-control" id="select_sessions">
+                    </select>
+                    <button type="button" class="btn btn-success" id="button_sessions_join">Join</button>
+                    <button type="button" class="btn btn-primary" id="button_sessions_create">Create</button>
+                    <button type="button" class="btn btn-primary" id="button_sessions_renew">Renew</button>
+                    <button type="button" class="btn btn-danger" id="button_sessions_delete">Delete</button>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-xs-1">
+                    <button type="button" class="btn btn-primary" id="button_send_ping">Send Ping</button>
+                </div>
+                <div class="col-xs-1" id="div_rtt_ms">
+                    RTT = 0 ms
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col">
+                    <h1>Sender</h1>
+                    <button type="button" class="btn btn-primary" id="button_activate_sender">Activate Sender</button>
+                    <div class="row" id="div_sender_video">
+
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col">
+                    <h1>Receiver</h1>
+                    <button type="button" class="btn btn-primary" id="button_activate_receiver">Activate
+                        receiver</button>
+                    <div class="row" id="div_receiver_video">
+                        <canvas id='canvas'></canvas>
+                        <video id="video_receiver" autoplay></video>
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
+
+
+
+        <p> hello </p>
+
+        <script type="text/javascript" src="main.js"></script>
+</body>
